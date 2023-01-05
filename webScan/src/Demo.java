@@ -63,6 +63,10 @@ public class Demo {
         int times = scanner.nextInt();
         int i = 0;
         while (i < times) {
+            /**
+             * 捕获数据包
+             * getPacket() 捕捉并返回一个数据包
+             */
             Packet packet = jpcapCaptor.getPacket();
             cap(packet);
             i++;
@@ -70,8 +74,8 @@ public class Demo {
     }
 
     /**
-     * 捕获数据包
-     * getPacket() 捕捉并返回一个数据包
+     * 对捕捉到的包进行处理分析
+     * @param packet
      */
     public static void cap(Packet packet) {
         if (packet instanceof IPPacket && ((IPPacket) packet).version == 4) {
