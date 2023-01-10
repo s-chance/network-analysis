@@ -20,14 +20,14 @@
 - windows10系统
 
 - Jdk版本1.8
-- winpcap4.1.2
+- winpcap4.1.3（更适合win8之前的系统）或Npcap1.72（更适合win10、win11系统）[官网参考说明](https://gitlab.com/wireshark/wireshark/-/wikis/WinPcap)
 - jpcap.jar和jpcap.dll
 
 本项目使用的文件及工具已放到仓库中
 
 ## 使用
 
-### 1.安装winpcap
+### 1.安装winpcap或Npcap（选择其一即可）
 
 ### 2.在Java项目中导入jpcap.jar
 
@@ -39,7 +39,9 @@
 
 - 需要选择当前正用于上网的网卡, 否则无法监听到数据
 - jpcap抓包存在丢包或超时的问题, 请等待几秒后再输入
-- 由于winpcap自身原因, winpcap无法捕获本地回环数据, 可考虑使用**Npcap+wireshark**(这里不再介绍)
+- 由于winpcap自身原因, winpcap无法捕获本地回环数据, 可考虑使用**Npcap**
+- win10、win11系统推荐Npcap（对于win10系统来说，它的捕获信息更加清晰和完整）
+- 不能同时安装winpcap或Npcap，使用其中的一个版本时请确保卸载另一个版本
 
 ## 最后
 
